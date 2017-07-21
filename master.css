@@ -8,6 +8,11 @@
   font-weight: lighter;
 }
 
+*:active{
+  box-shadow: none;
+  border: none;
+}
+
 button{
   border: none;
 }
@@ -64,8 +69,19 @@ button{
   border: 1px solid #7E7E7E;
 }
 
-#divide, #multiply, #subtract, #add, #equals, #modulo, #sqrt, #square, #delete{
+button:hover{
+  background-color: #A0A0A0;
+  box-shadow: 0px 1px 3px 0px #000000 inset;
+
+}
+
+.green{
   background-color: #50E3C2;
+}
+
+.green:hover{
+  box-shadow: 0px 1px 3px 0px #000000 inset;
+  background: #42B79C;
 }
 
 #zero{
