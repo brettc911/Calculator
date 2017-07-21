@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="master.css">
-    <title>Calculator</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Poop  Calculator</h1>
-      </header>
-      <span id="input"></span>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="master.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="calc">
+      <div class="window">
+        <span id="input"></span>
+      </div>
       <!---======= 0 - 9 BUTTONS ======-->
-      <button id="zero" class="number_button" name="button" value="0">0</button>
-      <button id="one" class="number_button" name="button" value="1">1</button>
-      <button id="two" class="number_button" name="button" value="2">2</button>
-      <button id="three" class="number_button" name="button" value="3">3</button>
-      <button id="four" class="number_button" name="button" value="4">4</button>
-      <button id="five" class="number_button" name="button" value="5">5</button>
-      <button id="six" class="number_button" name="button" value="6">6</button>
-      <button id="seven" class="number_button" name="button" value="7">7</button>
-      <button id="eight" class="number_button" name="button" value="8">8</button>
-      <button id="nine" class="number_button" name="button" value="9">9</button>
-      <!--===== OPERATOR BUTTONS ( +, -, *, /) ======-->
-      <button id="add" class="number_button" name="button" value="+">+</button>
-      <button id="subtract" class="number_button" name="button" value="-">-</button>
-      <button id="multiply" class="number_button" name="button" value="*">*</button>
-      <button id="divide" class="number_button" name="button" value="/">/</button>
+      <section class="main_buttons">
+        <!-- Row 1 -->
+        <button id="clear" class="number_button" name="button">AC</button>
+        <button id="sin" name="button">sin &#x3B8</button>
+        <button id="cos" name="button">cos &#x3B8</button>
+        <button id="tan" name="button">tan &#x3B8</button>
+        <!-- Row 2 -->
+        <button id="delete" name="button">&#x2190</button>
+        <button id="pie" name="button">&#x3C0</button>
+        <button id="sqrt" name="button">&#x221A</button>
+        <button id="square" name="button">&#x3A7<sup>2</sup></button>
+        <!-- Row 3 -->
+        <button id="seven" class="number_button" name="button" value="7">7</button>
+        <button id="eight" class="number_button" name="button" value="8">8</button>
+        <button id="nine" class="number_button" name="button" value="9">9</button>
+        <button id="divide" class="number_button" name="button" value="/">/</button>
+        <!-- Row 4 -->
+        <button id="four" class="number_button" name="button" value="4">4</button>
+        <button id="five" class="number_button" name="button" value="5">5</button>
+        <button id="six" class="number_button" name="button" value="6">6</button>
+        <button id="multiply" class="number_button" name="button" value="*">x</button>
+        <!-- Row 5 -->
+        <button id="one" class="number_button" name="button" value="1">1</button>
+        <button id="two" class="number_button" name="button" value="2">2</button>
+        <button id="three" class="number_button" name="button" value="3">3</button>
+        <button id="add" class="number_button" name="button" value="+">+</button>
+        <!-- Row 6 -->
+        <button id="zero" class="number_button" name="button" value="0">0</button>
+        <button id="decimal" class="number_button" name="button" value=".">.</button>
+        <button id="subtract" class="number_button" name="button" value="-">_</button>
+        <!-- Row 7 -->
+        <button id="equals" name="button">=</button>
+        <button id="modulo" class="number_button" name="button" value="%">%</button>
+      </section>
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
 
-
-      <button id="equals" name="button">=</button>
-      <button id="clear" class="number_button" name="button">C</button>
-
-    </div>
-    <script src="main.js"></script>
-  </body>
 </html>

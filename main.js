@@ -1,53 +1,44 @@
-// let dope = document.querySelector('.number_button')
-// dope.addEventListener('click', function clickedNumber() {
-//   var me = this
-//   var test = +(me.value)
-//   console.log(test)
-// });
+////========== LOADS WINDOW FUNCTION ==========////
+window.onload = function() {
+  console.log('loaded')
 
-
-// function clickedNumber(e) {
-//   // console.log( number_button.value)
-//   console.log(e.target.value)
-// }
-
-// document.querySelectorAll('.number_button').forEach(number_button => {number_button.addEventListener('click', function(e){console.log(e.target.value)})})
-
-var populate = []
-
-
-
-
-////========== RETURNS VALUE OF BUTTON CLICKED ==========////
-document.querySelectorAll('.number_button').forEach(number_button =>
-  number_button.addEventListener('click', function(e) {
-    ////========== PUSHES VALUE INTO AN ARRAY ==========////
-    populate.push(e.target.value)
-    ////========== JOINS VALUES INTO READABLE FORMAT ==========////
-    document.getElementById('input').innerHTML = populate.join("")
-  }));
-
-////========== JOINS VALUES INTO READABLE FORMAT ==========////
-document.getElementById('equals').addEventListener('click', function() {
   var result = (eval(document.getElementById('input').innerHTML))
-  document.getElementById('input').innerHTML = result;
-  populate = [result];
-});
 
-document.getElementById('clear').addEventListener('click', function() {
-  document.getElementById('input').innerHTML = "";
-  populate = [];
-});
+  ////========== POPULATES VALUES IN WINDOW  ==========////
+  document.querySelectorAll('.number_button').forEach(number_button =>
+    number_button.addEventListener('click', function(e) {
+      document.getElementById('input').innerHTML += e.target.value
+    }));
 
+  ////========== EQUATION FUNCTION ==========////
+  function Newequation(clickedElement, equation, x) {
+    document.getElementById(clickedElement).addEventListener('click', function() {
+      var result = (eval(document.getElementById('input').innerHTML))
+      document.getElementById('input').innerHTML = equation(+result, x);
+    });
+  }
 
-// var showMath = populate.join("")
+  ////========== EQUATIONS ==========////
+  //------ Square Root
+  Newequation('sqrt', Math.sqrt)
+  //------ Squared
+  Newequation('square', Math.pow, 2)
+  //------ Sin
+  Newequation('sin', Math.sin)
+  //------ Cos
+  Newequation('cos', Math.cos)
+  //------ Tan
+  Newequation('tan', Math.tan)
+  //------ Pi
+  Newequation('pie', () => Math.PI)
 
+  ////========== CLEARS INPUT ==========////
+  Newequation('clear', () => "")
+  ////========== EVALUATES INPUT ==========////
+  Newequation('equals', eval)
+  ////========== DELETE ONE CHARACTER ==========////
+  document.getElementById('delete').addEventListener('click', function() {
+    (document.getElementById('input').innerHTML) = (document.getElementById('input').innerHTML).slice(0, -1)
+  });
 
-
-
-
-
-
-
-
-// console.log(+document.getElementById('two').value + 1)
+}

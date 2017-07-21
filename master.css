@@ -1,20 +1,77 @@
+@@font-face {
+  font-family: 'helvetica';
+  src: url('fonts/LiberationSans-Regular.ttf');
+}
+
+*{
+  font-family: 'helvetica';
+  font-weight: lighter;
+}
+
+button{
+  border: none;
+}
+
 .wrapper{
+  width: 25%;
+  margin: 20px auto auto auto;
   display: flex;
-  width: 50%;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc{
+  width: 390px;
+  border-radius: 10px;
+  border: 1px solid #7E7E7E;
+  overflow: hidden;
+}
+
+.window{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span{
+  padding: 0 30px;
+  background: #7E7E7E;
+  width: 100%;
+  height: 130px;
+  font-size: 50px;
+  font-size: 4vw;
+  color: #fff;
+  font-weight: lighter;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /*========= BUTTON STYLING =========*/
-.number_button{
-  width: 20%;
-  background: lime;
-  height: 120px;
+.main_buttons{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 0;
+}
+
+button{
+  width: 25%;
+  height: 85px;
+  background: #F0F0F0;
+  font-size: 25px;
+  border: 1px solid #7E7E7E;
+}
+
+#divide, #multiply, #subtract, #add, #equals, #modulo, #sqrt, #square, #delete{
+  background-color: #50E3C2;
+}
+
+#zero{
+  width: 50%;
 }
 
 #equals{
-  width: 30%;
-  background: lime;
-  height: 120px;
+  width: 75%;
 }
